@@ -13,26 +13,30 @@
   // A shorter name to use when accessing the namespace.
   var self = Drupal.eu_cookie_compliance;
 
-  Drupal.behaviors.euCookieComplianceGTM = {
-    attach: function (context) {
+  // Temporaneamente stacco questa cosa che serve solo nel backend
+  // per rendere più carino il json, visto che usa jquery si rompe
+  // ed inoltre nel frontend non serve. Bisognerebbe fare un refactoring
+  // completo di tutto il codice.
+  // Drupal.behaviors.euCookieComplianceGTM = {
+  //   attach: function (context) {
 
-      var prettyPrint = function(e) {
-        var textarea = e.currentTarget;
-        var ugly = $(textarea).val();
-        try {
-          var obj = JSON.parse(ugly);
-          var pretty = JSON.stringify(obj, undefined, 4);
-          $(textarea).val(pretty);
-        } catch (e) {
-          // Oh well, but whatever...
-        }
-      }
+  //     var prettyPrint = function(e) {
+  //       var textarea = e.currentTarget;
+  //       var ugly = $(textarea).val();
+  //       try {
+  //         var obj = JSON.parse(ugly);
+  //         var pretty = JSON.stringify(obj, undefined, 4);
+  //         $(textarea).val(pretty);
+  //       } catch (e) {
+  //         // Oh well, but whatever...
+  //       }
+  //     }
 
-      $('textarea.eu_cookie_compliance_gtm_pretty_json').once('eu_cookie_compliance_gtm_pretty_json_processed').each(function () {
-        $(this).on('blur', prettyPrint);
-      });
-    }
-  };
+  //     $('textarea.eu_cookie_compliance_gtm_pretty_json').once('eu_cookie_compliance_gtm_pretty_json_processed').each(function () {
+  //       $(this).on('blur', prettyPrint);
+  //     });
+  //   }
+  // };
 
   /**
    * Replaces tokens in the GTM values.
