@@ -1,5 +1,9 @@
-# EU Cookie Compliance GTM
+# EU Cookie Compliance GTM - Drupal 10 + Consent mode
 
+This is a fork of the EU Cookie Compliance GTM Drupal module with Drupal 10 support and consent mode from [This patch](https://www.drupal.org/project/eu_cookie_compliance_gtm/issues/3332626).
+
+This project will be deleted when the contrib module will be uffically updated and patched.
+# Original description
 This is a complementary module for the [EU Cookie Compliance (GDPR Compliance)](https://www.drupal.org/project/eu_cookie_compliance) module, which integrates it with [GoogleTagManager](https://www.drupal.org/project/google_tag) module.
 Firstly, it extends the cookie category admin UI by adding a field to store arbitrary data in JSON format for each category.
 Secondly, it exposes that data in drupalSettings.
